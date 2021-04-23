@@ -5,6 +5,7 @@
     <router-link to="/hieu">Go to Hieu</router-link>
     <br>
     <router-link to="/home">Go to Home</router-link>
+    <router-link to="/contact">Go to Count</router-link>
     <router-view />
 
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
