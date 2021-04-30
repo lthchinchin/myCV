@@ -1,18 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HelloWorld from '../components/HelloWorld.vue'
-import Hieu from '../components/Hieu.vue'
 import Error from '../components/404.vue'
 import Contact from '../components/Contact.vue'
+import index from '../components/index.vue'
+import nav from '../components/nav.vue'
+// import store from '../store'
 
 Vue.use(VueRouter)
 const routes = [
-    { path: '/home', component: HelloWorld },
-    { path: '/', component: Hieu },
-    { path: '/hieu', component: Hieu },
+    { path: '/', component: index },
+    { path: '/home', component: index },
     { path: '/contact', component: Contact },
+    { path: '/nav', component: nav },
     { path: '/*', component: Error }
 ]
+
+
 
 const router = new VueRouter({
     // mode: 'history',
