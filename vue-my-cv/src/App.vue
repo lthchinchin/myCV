@@ -14,7 +14,7 @@
 </template>
 <script>
 import navBar from "./components/nav.vue";
-
+import "./assets/testcss/styles.css";
 // import TrgHieu from "./components/TrgHieu.vue";
 export default {
   methods: {},
