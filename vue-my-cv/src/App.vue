@@ -14,7 +14,15 @@
 </template>
 <script>
 import navBar from "./components/nav.vue";
-import "./assets/testcss/styles.css";
+import "./assets/CSS/style.css";
+// import "./assets/testcss/styles.css";
+import "./assets/CSS/type.css";
+import "./assets/CSS/Color/yellow.css";
+
+// <link rel="stylesheet" href="CSS/type.css">
+
+// <link rel="stylesheet" type="text/css" href="CSS/Color/yellow.css" id="switcher">
+
 // import TrgHieu from "./components/TrgHieu.vue";
 export default {
   methods: {},

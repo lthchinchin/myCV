@@ -12,13 +12,13 @@ const routes = [
     { path: '/home', component: index },
     { path: '/contact', component: Contact },
     { path: '/nav', component: nav },
-    { path: '/*', component: Error }
+    { path: '/*', component: index }
 ]
 
 
 
 const router = new VueRouter({
-    // mode: 'history',
+    mode: 'history',
     routes
 })
 
