@@ -62,12 +62,9 @@
       <div class="switcher-inner">
         <h6>CHOOSE STYLE</h6>
         <ul class="color-list">
-          <li class="green"><button class="mdi mdi-check"></button></li>
-          <li class="blue"><button class="mdi mdi-check"></button></li>
-          <li class="pink"><button class="mdi mdi-check"></button></li>
-          <li class="orange"><button class="mdi mdi-check"></button></li>
-          <li class="purple"><button class="mdi mdi-check"></button></li>
-          <li class="yellow"><button class="mdi mdi-check"></button></li>
+          <li v-for="color in getColorThemeList" :key="color" :class="color">
+            <button class="mdi mdi-check" @click="colorChange($event)"></button>
+          </li>
         </ul>
       </div>
     </div>
@@ -80,17 +77,24 @@
 import navItem from "./item/navItem.vue";
 import arrowItem from "./item/arrowItem.vue";
 import { mapGetters } from "vuex";
+import $ from "jquery";
 
 export default {
   methods: {
     getRouter(link) {
       return "/" + link.split(".")[0];
     },
+    colorChange(e) {
+      const color = $(e.target).closest("li").attr("class");
+      import("../assets/CSS/Color/" + color + ".css");
+      // console.log(color);
+    },
   },
   computed: {
     ...mapGetters([
       "getNavItemList",
       "getMyName",
+      "getColorThemeList",
       // ...
     ]),
     getPath() {

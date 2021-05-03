@@ -18,12 +18,26 @@ import "./assets/CSS/style.css";
 // import "./assets/testcss/styles.css";
 import "./assets/CSS/type.css";
 import "./assets/CSS/Color/yellow.css";
+// import "./assets/CSS/Color/pink.css";
 
 // <link rel="stylesheet" href="CSS/type.css">
 
 // <link rel="stylesheet" type="text/css" href="CSS/Color/yellow.css" id="switcher">
 
 // import TrgHieu from "./components/TrgHieu.vue";
+
+// import "./assets/JS/jquery.lineProgressbar.js";
+// import "./assets/JS/waypoints.js";
+// import "./assets/JS/jquery.counterup.min.js";
+// import "./assets/JS/imagesloaded.pkgd.min.js";
+// import "./assets/JS/masonry.pkgd.min.js";
+// import "./assets/JS/classie.js";
+// import "./assets/JS/modernizr.custom.js";
+// import "./assets/JS/jquery.hoverdir.js";
+// import "./assets/JS/cbpGridGallery.js";
+// import "./assets/JS/type.js";
+// import "./assets/JS/script.js";
+
 export default {
   methods: {},
   data() {

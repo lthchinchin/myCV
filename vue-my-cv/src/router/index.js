@@ -4,6 +4,7 @@ import Error from '../components/404.vue'
 import Contact from '../components/Contact.vue'
 import index from '../components/index.vue'
 import nav from '../components/nav.vue'
+import about from '../components/about.vue'
 // import store from '../store'
 
 Vue.use(VueRouter)
@@ -12,13 +13,14 @@ const routes = [
     { path: '/home', component: index },
     { path: '/contact', component: Contact },
     { path: '/nav', component: nav },
-    { path: '/*', component: index }
+    { path: '/about', component: about },
+    { path: '/*', component: Error }
 ]
 
 
 
 const router = new VueRouter({
-    mode: 'history',
+    // mode: 'history',
     routes
 })
 
