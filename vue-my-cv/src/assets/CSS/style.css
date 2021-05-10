@@ -692,7 +692,7 @@ section#home {
 
 .home-bg {
     /* background: url(https://kawsar4469.github.io/krthemes/Dark/Images/home-bg.jpg); */
-    background: url(http://localhost:8080/img/ava1.jpg);
+    background: url(/img/ava1.jpg);
     height: calc(100vh - 60px);
     background-repeat: no-repeat;
     background-size: cover;

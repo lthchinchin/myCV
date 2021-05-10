@@ -31,9 +31,9 @@
         </button>
         <div class="nav-menu">
           <ul class="nav-links">
-            <li v-for="(item, index) in getNavItemList" :key="item.href">
+            <li v-for="item in getNavItemList" :key="item.href">
               <router-link
-                :class="{ 'nav-active': index == 0 }"
+                :class="{ 'nav-active': getPath == item.href }"
                 :to="getRouter(item.href)"
               >
                 <i :class="[item.class, 'mr-3']"></i>{{ item.href }}

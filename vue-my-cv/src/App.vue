@@ -7,6 +7,7 @@
     <router-link to="/home">Go to Home</router-link>
     <router-link to="/contact">Go to Count</router-link> -->
     <!-- <img alt="Vue logo" src="img/ava.jpg" /> -->
+    <button @click="goto">Go</button>
     <router-view />
 
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
@@ -18,6 +19,7 @@ import "./assets/CSS/style.css";
 // import "./assets/testcss/styles.css";
 import "./assets/CSS/type.css";
 import "./assets/CSS/Color/yellow.css";
+// import axios from "axios";
 // import "./assets/CSS/Color/pink.css";
 
 // <link rel="stylesheet" href="CSS/type.css">
@@ -39,9 +41,19 @@ import "./assets/CSS/Color/yellow.css";
 // import "./assets/JS/script.js";
 
 export default {
-  methods: {},
+  created: function () {
+    // axios
+    //   .get("http://localhost:81/cuteweb/vueapi/readvueweb.php")
+    //   .then((response) => console.log(response));
+  },
+  methods: {
+    goto() {
+      location = "/#/home";
+    },
+  },
   data() {
     return {
+      dogRandom: "",
       dataText: "ssdsd",
     };
   },

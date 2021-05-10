@@ -20,7 +20,7 @@
             </p>
           </div>
           <div class="col-sm-12 col-md-6 p-0">
-            <a class="description-btn" href="#">
+            <a class="description-btn" href="img/CV.jpg" download>
               <span class="name-description">DOWNLOAD CV</span>
               <div class="btn-icon">
                 <i class="mdi mdi-download"></i>
@@ -46,7 +46,7 @@
                 <span>Phone :</span><span> {{ getMyInfo.contact.phone }}</span>
               </li>
               <li>
-                <span>E-mail :</span><span>{{ getMyInfo.contact.email }}</span>
+                <span>E-mail :</span><span> {{ getMyInfo.contact.email }}</span>
               </li>
               <li><span>Language :</span><span> English</span></li>
             </ul>
@@ -56,7 +56,7 @@
       <div class="row pt-5">
         <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
           <div class="about-box">
-            <h1 class="text-right"><span>5+</span></h1>
+            <h1 class="text-right"><span>0</span></h1>
             <h5>
               YEARS OF <br />
               EXPERIENCE
@@ -65,7 +65,7 @@
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
           <div class="about-box">
-            <h1 class="text-right"><span>100+</span></h1>
+            <h1 class="text-right"><span>5</span></h1>
             <h5>
               COMPLETED <br />
               PROJECTS
@@ -74,7 +74,7 @@
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
           <div class="about-box">
-            <h1 class="text-right"><span>83+</span></h1>
+            <h1 class="text-right"><span>5</span></h1>
             <h5>
               HAPPY <br />
               CLIENTS
@@ -140,24 +140,6 @@
                 interdum sed tortor.
               </p>
             </div>
-            <div class="experince-box">
-              <h5 class="box-title">Specialization Course</h5>
-              <span class="item-period">2017</span>
-              <span class="item-small"> | The IT Aid</span>
-              <p class="box-description">
-                Mauris magna sapien, pharetra consectetur fringilla vitae,
-                interdum sed tortor.
-              </p>
-            </div>
-            <div class="experince-box">
-              <h5 class="box-title">Specialization Course</h5>
-              <span class="item-period">2017</span>
-              <span class="item-small"> | The IT Aid</span>
-              <p class="box-description">
-                Mauris magna sapien, pharetra consectetur fringilla vitae,
-                interdum sed tortor.
-              </p>
-            </div>
           </div>
         </div>
       </div>
@@ -179,13 +161,9 @@
           <div id="jquery"></div>
         </div>
         <div class="col-lg-6">
-          <p class="skill-name">WordPress</p>
-          <div id="wp"></div>
-          <p class="skill-name">Web Design</p>
-          <div id="web-des"></div>
           <p class="skill-name">PHP</p>
           <div id="php"></div>
-          <p class="skill-name">Web Development</p>
+          <p class="skill-name">Vuejs</p>
           <div id="web-dev"></div>
         </div>
       </div>
@@ -196,8 +174,26 @@
 
 <script>
 import { mapGetters } from "vuex";
+import axios from "axios";
 
+// import $ from "jquery";
 export default {
+  created: function () {
+    axios
+      .get(
+        "http://localhost:81/cuteweb/vueapi/checkToken.php?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTExLCJ1c2VyTmFtZSI6ImxldHJ1bmdoaWV1IiwicGFzc1dvcmQiOiJhZG1pbiJ9.p0UbHKjAh60uDM1Qu4spptFYxpr6yFY0gU_cOWrQ3xI0"
+      )
+      .then((response) => {
+        console.log(response.data);
+        if (response.data != true) {
+          location = "/#/home";
+        }
+      });
+
+    // `this` trỏ đến đối tượng Vue hiện hành
+    // console.log("sdsdsd");
+    // $("#lineProgressbar").attr("src", "js/jquery.lineProgressbar.js");
+  },
   methods: {},
   computed: {
     ...mapGetters([

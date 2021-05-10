@@ -16,9 +16,9 @@ const store = new Vuex.Store({
         navItemList: [
             { class: "mdi mdi-home", href: "home" },
             { class: "mdi mdi-account", href: "about" },
-            { class: "mdi mdi-face-agent", href: "services" },
-            { class: "mdi mdi-briefcase-variant", href: "portfolio" },
-            { class: "mdi mdi-forum", href: "blog" },
+            // { class: "mdi mdi-face-agent", href: "services" },
+            // { class: "mdi mdi-briefcase-variant", href: "portfolio" },
+            // { class: "mdi mdi-forum", href: "blog" },
             { class: "mdi mdi-account-box", href: "contact" },
         ],
         colorTheme: ["yellow", "green", "blue", "orange", "purple", "pink"]
